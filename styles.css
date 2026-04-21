@@ -61,4 +61,125 @@ body{
 }
 .main{
     margin-left: 20rem;
+    margin-bottom: 2rem;
+
+}
+.projects{
+    display: grid;
+    grid-template-rows: repeat(auto-fit, minmax(400px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    align-content: center;
+
+}
+.project{
+    height: 300px;
+    width: 300px;
+    box-shadow: 4px 1px 15px 2px black;
+      transition: transform 0.3s ease-in-out;
+}
+
+.project:hover{
+    transform: scale(1.02) translateY(-5px);
+}
+
+
+.preview > img{
+    height: 200px;
+    width: 300px;
+    object-fit: cover;
+}
+
+.title-icons{
+    display: flex;
+    justify-content: space-around;
+}
+.title-icons{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0rem 1rem 0rem 1rem;
+}
+
+a >img{
+    height: 20px;
+    width: 20px;
+}
+.description{
+    font-size: 12px;
+    padding: 0rem 1rem 0rem 1rem;
+}
+
+footer{
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+    justify-items: center;
+    background-color: #0891b2;
+    padding-left: 20rem;
+    color: white;
+}
+
+.icons{
+    display: flex;
+    flex-direction: column;
+    grid-column: 1/1;
+}
+
+.icons> img{
+    height: 20px;
+    width: 20px;
+}
+
+.cover-image > img{
+    padding-top: 1rem;
+    grid-row: 1/-1;
+    grid-column: 1/-1;
+    height: 400px;
+    width: 400px;
+    object-fit: cover;
+}
+
+@media (width <= 800px){
+    .diagonal-box{
+        width: 100vw;
+    }
+    .profile-pic{
+        margin-top: 10rem;
+        transform: translateY(-150px);
+    }
+    .about{
+        min-width: 40vw;
+    }
+    footer{
+        width: 450px;
+    }
+    .cover-image > img{
+        height: 300px;
+        width: 300px;
+        object-fit: cover;
+    }
+    .projects{
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+}
+
+@media (width <= 500px){
+        .diagonal-box{
+        min-width: 181vw;
+    }
+    .header{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .about, .profile-pic{
+        margin: 0;
+    }
+    .about{
+        height: 40vh;
+        width: 100vw;
+        margin-bottom: 10rem ;
+    }
 }
